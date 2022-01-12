@@ -1,0 +1,426 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 17, 2021, 3:08:11 PM
+    Author     : Thanh_Tran_420
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #fff;
+    width: 100%;
+    height: 650px;
+}
+/*-----------------------------style for header-------------------------------*/
+header {
+    width: 100%;
+    height: 70px;
+}
+#div_1 {
+    display: flex;
+    width: 30%;
+    float: left;
+    justify-content: flex-end;
+    padding-right: 3%;
+}
+#div_2 {
+    display: flex;
+    width: 67%;
+    float: right;
+    justify-content: flex-start;
+}
+#nav_menu a {
+    text-decoration: none;
+}
+#nav_menu li {
+    display: block;
+    list-style-type: none;
+}
+#nav_menu ul {
+    position: relative;    /* So the first submenu can be positioned within the main menu */
+}
+#nav_menu ul li {
+    float: left;
+}
+#nav_menu ul ul {
+    display: none;         /* Don't display submenu until hover of the li element */
+    position: absolute;
+    top: 100%;             /* Position the submenu at the bottom of the main menu */
+}
+#nav_menu ul ul li {
+    float: none;           /* Display the submenus vertically */
+    position: relative;    /* So the second submenu can be positioned within the first submenu */
+}
+#nav_menu ul ul li ul {
+    position: absolute;
+    left: 100%;            /* Position the second submenu at the right side of the li element */ 
+    top: 0;                /* Position the second submenu at the top of the li element */
+}
+#nav_menu ul li:hover > ul {
+    display: block;        /* Display the submenu on hover of the li element */
+}
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#nav_menu ul li a {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: block;
+    padding-bottom: 5px;
+    background-color: #fff;
+    color: #2f2f2f;
+    font-weight: normal;
+}
+.logo {
+    max-width: 100%;
+    padding-top: 8px;
+}
+.search_logo {
+    padding-top: 35px;
+    padding-left: 10px;
+}
+.home, .register, .vieclam, .iviettech, .trangvang, .blog {
+    margin-top: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #ca3438;
+}
+.chuyennghiep ul li a, .chuyensau ul li a, .thietkedohoa ul li a, .captoc ul li a, .khoakhac ul li a {
+    text-align: left !important;
+    width: 161px;
+}
+.cackhoahoc li a {
+    text-align: left !important;
+}
+.cackhoahoc {
+    margin-top: 35px;
+    border-right: 1px solid #ca3438;
+}
+.cackhoahoc a {
+    width: 180px;
+}
+#nav_menu ul ul li a {
+    display: block;
+    width: 180px;
+    height: 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 8px;
+    background-color: #fff;
+    border-bottom: 1px solid #ca3438;
+    box-shadow: 0 5px 10px lightslategray;
+    font-size: 90%;
+}
+#nav_menu ul ul ul li a {
+    width: 195px;
+}
+#nav_menu ul li a:hover {
+    color: orange;
+}
+@media screen and (max-width: 1170px) {
+    #nav_menu ul li a {
+        font-size: 90%;
+        margin-bottom: -5px;
+        padding-top: 5px;
+        padding-bottom: 12px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #nav_menu ul li a {
+        font-size: 60%;
+    }
+    .cackhoahoc a {
+        width: 116px;
+    }
+}
+#mobile_menu {
+    display: none;
+}
+@media screen and (max-width: 805px) {
+    header {
+        height: 120px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 65px auto;
+        grid-template-areas:
+            "div_1"
+            "div_2"
+    }
+    .logo {
+        padding-top: 5px;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    #div_1 {
+        grid-area: div_1;
+        float: none;
+        padding-right: 0;
+    }
+    #div_2 {
+        grid-area: div_2;
+        display: block;
+        float: none;
+    }
+    main article {
+        display: none;
+    }
+    #nav_menu {
+        display: none;
+    }
+    #mobile_menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+    .home, .register, .vieclam, .iviettech, .trangvang, .blog {
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-right: 0;
+    }
+    .cackhoahoc {
+        margin-top: 0;
+        border-right: 0;
+    }
+    .cackhoahoc a {
+        width: 150px;
+    }
+    .search_logo {
+        display: none;
+    }
+}
+/*-------------------------------style for main-------------------------------*/
+main {
+    width: 100%;
+    height: 485px;
+    background-color: #fff;
+    padding: 20px 0 15px;
+    border-top: 5px solid #ca3438;
+}
+#container section {
+    width: 55%;
+    padding-left: 14%;
+    float: left;
+}
+#container section h2 {
+    display: block;
+    width: 100%;
+}
+#container aside {
+    width: 285px;
+    height: 475px;
+    padding-left: 3%;
+    float: left;
+}
+.pen {
+    height: 38px;
+    width: 38px;
+    margin-right: 9px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.pen_circle {
+    background-color: #ca3438;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.h21 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #d45b5f;
+}
+.h21 a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #ca3438;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    text-decoration: none;
+}
+.ss1 li {
+    list-style-type: none;
+    clear: both;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 14px;
+    background-color: #fff;
+    padding: 6px 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.ss1 select {
+    margin-left: -5px;
+    border: 0;
+    width: 100%;
+    font-size: 95%;
+    color: #333;
+}
+.form_name {
+    font-size: 95%;
+    background-color: #fff;
+    width: 100%;
+    line-height: 1.5em;
+    color: #333;
+    border: 0;
+}
+.form_email {
+    font-size: 95%;
+    background-color: #fff;
+    width: 100%;
+    line-height: 1.5em;
+    color: #333;
+    border: 0;
+}
+.form_phone {
+    font-size: 95%;
+    background-color: #fff;
+    width: 100%;
+    line-height: 1.5em;
+    color: #333;
+    border: 0;
+}
+.form_lophoc {
+    font-size: 95%;
+    background-color: #fff;
+    width: 100%;
+    line-height: 1.5em;
+    color: #333;
+    border: 0;
+}
+.form_message {
+    font-size: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    width: 100%;
+    height: 42px;
+    line-height: 1.5em;
+    color: #333;
+    border: 0;
+}
+.dangky {
+    width: 10% !important;
+    margin-left: 87% !important;
+    text-align: center;
+    background-color: #c60024 !important;
+}
+.dangky button {
+    background-color: #c60024;
+    font-size: 110%;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    border: 0;
+    font-weight: bold;
+}
+.note {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 95%;
+    color: #ff0000;
+}
+.tuvan {
+    width: 265px;
+    height: 340px;
+    border: 1px dashed #e62e2f;
+    border-radius: 4px;
+    padding: 20px 15px 25px;
+}
+.tuvan p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #ca3438;
+    font-weight: normal;
+    text-transform: capitalize;
+    padding: 14px 0 10px;
+    text-align: center;
+}
+.tuvan ul li {
+    list-style-type: none;
+}
+.lienlac ul li img {
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin: 0 9px;
+}
+.lienlac {
+    padding-left: 45px;
+}
+.lienhe {
+    clear: both;
+    padding-left: 15px;
+    padding-top: 25px;
+}
+.lienhe ul li img {
+    float: left;
+    height: 30px;
+    width: 30px;
+    margin: 0 4px;
+}
+.people {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.people img {
+    width: 147px;
+    height: 147px;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rosybrown;
+}
+@media screen and (max-width: 1295px) {
+    .people img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+/*----------------------------style for the footer----------------------------*/
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #a9a9a9;
+}
+.brand {
+    float: left;
+    width: 70%;
+    padding: 15px 5px 9px;
+}
+.brand p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.brand a {
+    text-decoration: none;
+    color: #fff;
+}
+.copyright {
+    line-height: 55px;
+    float: right;
+    padding-right: 70px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.copyright a {
+    text-decoration: none;
+    color: #fff;
+}

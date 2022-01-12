@@ -1,0 +1,1026 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 16, 2021, 11:26:40 AM
+    Author     : Thanh_Tran_420
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #fff;
+    width: 100%;
+    height: 2230px;
+}
+/*-----------------------------style for header------------------------------*/
+header {
+    width: 100%;
+    height: 70px;
+}
+#div_1 {
+    display: flex;
+    width: 30%;
+    float: left;
+    justify-content: flex-end;
+    padding-right: 3%;
+}
+#div_2 {
+    display: flex;
+    width: 67%;
+    float: right;
+    justify-content: flex-start;
+}
+#nav_menu a {
+    text-decoration: none;
+}
+#nav_menu li {
+    display: block;
+    list-style-type: none;
+}
+#nav_menu ul {
+    position: relative;    /* So the first submenu can be positioned within the main menu */
+}
+#nav_menu ul li {
+    float: left;
+}
+#nav_menu ul ul {
+    display: none;         /* Don't display submenu until hover of the li element */
+    position: absolute;
+    top: 100%;             /* Position the submenu at the bottom of the main menu */
+}
+#nav_menu ul ul li {
+    float: none;           /* Display the submenus vertically */
+    position: relative;    /* So the second submenu can be positioned within the first submenu */
+}
+#nav_menu ul ul li ul {
+    position: absolute;
+    left: 100%;            /* Position the second submenu at the right side of the li element */ 
+    top: 0;                /* Position the second submenu at the top of the li element */
+}
+#nav_menu ul li:hover > ul {
+    display: block;        /* Display the submenu on hover of the li element */
+}
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#nav_menu ul li a {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: block;
+    padding-bottom: 5px;
+    background-color: #fff;
+    color: #2f2f2f;
+    font-weight: normal;
+}
+.logo {
+    max-width: 100%;
+    padding-top: 8px;
+}
+.search_logo {
+    padding-top: 35px;
+    padding-left: 10px;
+}
+.home, .register, .vieclam, .iviettech, .trangvang, .blog {
+    margin-top: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #ca3438;
+}
+.chuyennghiep ul li a, .chuyensau ul li a, .thietkedohoa ul li a, .captoc ul li a, .khoakhac ul li a {
+    text-align: left !important;
+    width: 161px;
+}
+.cackhoahoc li a {
+    text-align: left !important;
+}
+.cackhoahoc {
+    margin-top: 35px;
+    border-right: 1px solid #ca3438;
+}
+.cackhoahoc a {
+    width: 180px;
+}
+#nav_menu ul ul li a {
+    display: block;
+    width: 180px;
+    height: 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 8px;
+    background-color: #fff;
+    border-bottom: 1px solid #ca3438;
+    box-shadow: 0 5px 10px lightslategray;
+    font-size: 90%;
+}
+#nav_menu ul ul ul li a {
+    width: 195px;
+}
+#nav_menu ul li a:hover {
+    color: orange;
+}
+/*------------------------------style for main--------------------------------*/
+.dangkyhoc {
+    border-top: 5px solid #ca3438;
+    width: 100%;
+}
+#ctdt {
+    width: 100%;
+    height: 400px;
+    background-color: #ca3438;
+    margin-top: -5px;
+    display: flex;
+}
+#ctdt section {
+    height: 320px;
+    width: 14%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15%;
+    border: 1px dashed #fff;
+    border-radius: 3px;
+    padding: 14px 18px 14px;
+}
+#ctdt aside {
+    height: 320px;
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 30px;
+    border: 1px dashed #fff;
+    border-radius: 3px;
+    padding: 14px 18px 14px;
+}
+#ctdt section h2 {
+    display: block;
+}
+.ss1 ul {
+    padding-top: 11px;
+}
+.ss1 li {
+    list-style-type: none;
+    clear: both;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 14px;
+    background-color: #db777a;
+    padding: 3px 6px;
+    margin-bottom: 7px;
+    line-height: 1.5em;
+}
+.ss1 input {
+    color: #fff !important;
+}
+.ss1 select {
+    background-color: #db777a;
+    margin-left: -5px;
+    border: 0;
+    width: 100%;
+    font-size: 95%;
+    color: #fff;
+}
+.dangky {
+    font-size: 14px !important;
+    background-color: #faa724 !important;
+    font-weight: bold;
+    padding: 8px 12px 9px !important;
+    margin-top: 14px !important;
+    text-align: center;
+}
+.dangky button {
+    background-color: #faa724;
+    font-size: 110%;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    border: 0;
+    font-weight: bold;
+}
+.ss2 ul {
+    display: flex;
+    flex-direction: row;
+}
+.ss2 li {
+    list-style-type: none;
+    text-align: center;
+    padding: 15px;
+}
+.ss2 li img {
+    width: 115px;
+    height: 115px;
+    max-width: 100%;
+    display: inline-block;
+    padding: 5px;
+    border: 1px dashed #fff;
+    border-radius: 50%;
+}
+.ss2 ul li p {
+    font-family: Arial;
+    font-size: 80%;
+    color: #fff;
+}
+.ss2 ul li h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ss2 ul li a {
+    text-decoration: none;
+}
+.h21 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d45b5f;
+}
+.pen {
+    height: 38px;
+    width: 38px;
+    margin-right: 9px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.pen_circle {
+    background-color: #ff7071;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.h22 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d45b5f;
+}
+.h22 a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    text-decoration: none;
+}
+.hat {
+    height: 38px;
+    width: 38px;
+    margin-right: 9px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.hat_circle {
+    background-color: #ff7071;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.form_name {
+    font-size: 95%;
+    background-color: #db777a;
+    width: 100%;
+    line-height: 1.5em;
+    color: #fff;
+    border: 0;
+}
+.form_email {
+    font-size: 95%;
+    background-color: #db777a;
+    width: 100%;
+    line-height: 1.5em;
+    color: #fff;
+    border: 0;
+}
+.form_phone {
+    font-size: 95%;
+    background-color: #db777a;
+    width: 100%;
+    line-height: 1.5em;
+    color: #fff;
+    border: 0;
+}
+.form_lophoc {
+    font-size: 95%;
+    background-color: #db777a;
+    width: 100%;
+    line-height: 1.5em;
+    color: #fff;
+    border: 0;
+}
+.form_message {
+    font-size: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #db777a;
+    width: 100%;
+    height: 42px;
+    line-height: 1.5em;
+    color: #fff;
+    border: 0;
+}
+@media screen and (max-width: 1170px) {
+    #nav_menu ul li a {
+        font-size: 90%;
+        margin-bottom: -5px;
+        padding-top: 5px;
+        padding-bottom: 12px;
+    }
+    #gioithieu aside p {
+        font-size: 85% !important;
+    }
+    .iviettech_logo {
+        padding-right: 40% !important;
+    }
+    .intro {
+        margin-left: 10% !important;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #nav_menu ul li a {
+        font-size: 60%;
+    }
+    .cackhoahoc a {
+        width: 116px;
+    }
+}
+#mobile_menu {
+    display: none;
+}
+@media screen and (max-width: 805px) {
+    header {
+        height: 120px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 65px auto;
+        grid-template-areas:
+            "div_1"
+            "div_2"
+    }
+    .logo {
+        padding-top: 5px;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    #div_1 {
+        grid-area: div_1;
+        float: none;
+        padding-right: 0;
+    }
+    #div_2 {
+        grid-area: div_2;
+        display: block;
+        float: none;
+    }
+    main article {
+        display: none;
+    }
+    #nav_menu {
+        display: none;
+    }
+    #mobile_menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+    .home, .register, .vieclam, .iviettech, .trangvang, .blog {
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-right: 0;
+    }
+    .cackhoahoc {
+        margin-top: 0;
+        border-right: 0;
+    }
+    .cackhoahoc a {
+        width: 150px;
+    }
+    .search_logo {
+        display: none;
+    }
+}
+@media screen and (max-width: 950px) {
+    #ctdt {
+        height: 450px;
+    }
+    #ctdt section {
+        height: 350px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    #ctdt aside {
+        height: 350px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    } 
+}
+@media screen and (max-width: 767px) {
+    #ctdt {
+        width: 100%;
+        height: 790px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 350px 350px;
+        grid-template-areas:
+            "sect"
+            "side"
+    }
+    #ctdt section {
+        width: 90%;
+        height: 320px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 2%;
+        grid-area: sect;
+        justify-content: center;
+    }
+    #ctdt aside {
+        width: 90%;
+        height: 320px;
+        margin-top: 55px;
+        margin-left: 2%;
+        grid-area: side;
+        justify-content: center;
+    }
+}
+/*-------------------------style for the second div---------------------------*/
+#gioithieu {
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+#gioithieu section {
+    display: flex;
+    width: 37%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}
+.intro {
+    width: 259px;
+    height: 259px;
+    margin-left: 25%;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px lightskyblue;
+}    
+#gioithieu aside {
+    display: block;
+    width: 63%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.iviettech_logo {
+    height: 54px;
+    padding-bottom: 10px;
+    padding-right: 56%;
+    border-bottom: 1px dashed lightskyblue;
+}
+#gioithieu aside h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 170%;
+    color: #2f2f2f;
+    font-weight: normal;
+    text-transform: capitalize;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+#gioithieu aside p {
+    display: block;
+    width: 85%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    color: #2f2f2f;
+}
+.xemthem {
+    text-align: right;
+}
+.readmore {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80%;
+    text-decoration: none;
+    background-color: #c5450c;
+    color: #fff;
+    padding: 5px 8px 5px;
+    display: inline-block;
+    border-radius: 4px;
+}
+.readmore:hover, .readmore:focus {
+    background-color: #faa724;
+    color: #fff;
+}
+/*--------------------------style for the third div---------------------------*/
+#lopkhaigiang {
+    width: 100%;
+    height: 500px;
+    background-color: #ca3438;
+}
+#lopkhaigiang section {
+    float: left;
+    margin-left: 15%;
+    padding-top: 4%;
+    height: 400px;
+    width: 45%;
+}
+#lopkhaigiang aside {
+    float: left;
+    width: 20%;
+    padding: 14px 10px 14px;
+    margin-top: 44px;
+    margin-left: 4%;
+    border: 1px dashed #fff;
+    border-radius: 4px;
+}
+.schedule {
+    height: 25px;
+    width: 25px;
+    padding-top: 6px;
+    padding-left: 6px;
+    margin-right: 9px;
+}
+.schedule_circle {
+    background-color: #ff7071;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.schedule_1 {
+    display: block;
+    column-count: 2;
+}
+.schedule_1 li a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 95%;
+    font-weight: normal;
+}
+.schedule_1 li a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+.schedule_1 li p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 95%;
+    font-weight: normal;
+}
+.schedule_1 ul li a img {
+    float: left;
+    width: 63px;
+    height: 63px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.schedule_1 ul li {
+    list-style-type: none;
+    text-align: left;
+    width: 100%;
+    padding: 8px 0;
+    display: block;
+}
+.h23 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d45b5f;
+}
+.h23 a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    text-decoration: none;
+}
+.other {
+    height: 25px;
+    width: 25px;
+    padding-top: 6px;
+    padding-left: 6px;
+    line-height: 20px;
+    margin-right: 9px;
+    display: inline-block;
+}
+.other_circle {
+    background-color: #ff7071;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.h24 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d45b5f;
+}
+.h24 a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #fff;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    text-decoration: none;
+}
+.schedule_2 li {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    min-height: 60px;
+    display: block;
+    border-bottom: 1px dashed #D45B5F;
+    text-align: left;
+}
+.schedule_2 li img {
+    float: left;
+    width: 43px;
+    height: 44px;
+    margin-top: 6px;
+}
+.para1 {
+    overflow: hidden;
+    padding-left: 9px;
+}
+.para1 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: normal;
+    color: #fff;
+}
+.para1 a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: normal;
+    color: #fff;
+}
+.para1 a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+.para2 {
+    overflow: hidden;
+    padding-left: 9px;
+}.para2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: normal;
+    color: #fff;
+}
+.para2 a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: normal;
+    color: #fff;
+}
+.para2 a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+.para3 {
+    overflow: hidden;
+    padding-left: 9px;
+}.para3 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: normal;
+    color: #fff;
+}
+.para3 a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: normal;
+    color: #fff;
+}
+.para3 a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+.para4 {
+    overflow: hidden;
+    padding-left: 9px;
+}.para4 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: normal;
+    color: #fff;
+}
+.para4 a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.5px;
+    font-weight: normal;
+    color: #fff;
+}
+.para4 a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+/*-------------------------style for the fourth div----------------------------*/
+#tintuctuyendung {
+    width: 100%;
+    height: 535px;
+    color: #2f2f2f;
+    padding: 30px 0 0;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 280px 300px;
+    grid-template-areas:
+        "sec1 side"
+        "sec2 side"
+}
+.news {
+    grid-area: sec1;
+}
+.hotnews {
+    grid-area: sec2;
+}
+.recruit {
+    grid-area: side;
+}
+.news {
+    width: 75%;
+    margin-left: 180px;
+    float: left;
+}
+.h25 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #2f2f2f;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d2d2d2;
+    margin-left: 10px;
+}
+.h25 a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #2f2f2f;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    text-decoration: none;
+}
+.letter {
+    height: 25px;
+    width: 25px;
+    padding-top: 6px;
+    padding-left: 6px;
+    line-height: 20px;
+    margin-right: 9px;
+    display: inline-block;
+}
+.letter_circle {
+    background-color: #ff7071;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.event {
+    padding: 25px 0;
+}
+img.trendy {
+    width: 262px;
+    height: 177px;
+    border: 1px solid #a9a9a9;
+    max-width: 100%;
+    vertical-align: middle;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.event h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #2f2f2f;
+    font-weight: normal;
+    padding: 3px 0;
+}
+p.date {
+    color: #979797;
+    margin: 5px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+    font-weight: normal;
+}
+img.time {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+p.xuhuong {
+    margin: 12px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    font-weight: lighter;
+}
+.hotnews {
+    width: 75%;
+    margin-left: 180px;
+    clear: both;
+}
+.h26 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #2f2f2f;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d2d2d2;
+    margin-left: 10px;
+}
+.h26 a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #2f2f2f;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    text-decoration: none;
+}
+.tintucdadua {
+    padding: 20px 0;
+    margin-left: 10px;
+}
+.tintucdadua ul {
+    display: flex;
+}
+.tintucdadua ul li {
+    list-style-type: none;
+}
+.tintucdadua ul li img.tintuc1 {
+    width: 100px;
+    height: 83px;
+    float: left;
+    padding-right: 10px;
+}
+.tintucdadua ul li img.tintuc2 {
+    width: 100px;
+    height: 83px;
+    float: left;
+    padding-right: 10px;
+}
+.tintucdadua h4 a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #595959;
+    font-weight: normal;
+    font-size: 13px;
+}
+.li1 {
+    width: 87%;
+}
+.li2 {
+    margin-left: 5px;
+}
+.recruit {
+    width: 70%;
+    float: left;
+    margin-left: 15px;
+}
+.h27 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #2f2f2f;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d2d2d2;
+    margin-left: 10px;
+}
+.h27 a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 115%;
+    color: #2f2f2f;
+    font-weight: normal;
+    display: block;
+    line-height: 34px;
+    text-decoration: none;
+    text-align: left;
+}
+.hire {
+    height: 25px;
+    width: 25px;
+    padding-top: 6px;
+    padding-left: 6px;
+    line-height: 20px;
+    margin-right: 9px;
+    display: inline-block;
+}
+.hire_circle {
+    background-color: #ff7071;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.tintuyendung {
+    padding: 20px 0 20px 20px;
+}
+.tintuyendung ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+.tintuyendung li img.congviec {
+    width: 63px;
+    height: 63px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 10px;
+}
+.tintuyendung li a {
+    color: #cf484c;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .88em;
+    font-weight: bold;
+}
+.tintuyendung li a:hover, .tintuyendung li a:focus {
+    color: #c5450c;
+    text-shadow: 0 0 5px #faa724;
+}
+.congty {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .90em;
+    margin-bottom: 5px;
+}
+/*----------------------------------------------------------------------------*/
+
+/*---------------------------style for the footer-----------------------------*/
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #a9a9a9;
+}
+.brand {
+    float: left;
+    width: 70%;
+    padding: 15px 5px 9px;
+}
+.brand p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.brand a {
+    text-decoration: none;
+    color: #fff;
+}
+.copyright {
+    line-height: 55px;
+    float: right;
+    padding-right: 70px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.copyright a {
+    text-decoration: none;
+    color: #fff;
+}
