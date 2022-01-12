@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Facebook – log in or sign up</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Log in to Facebook to start sharing and connecting with your friends, family and people you know.">
+        <link rel="shortcut icon" href="images/fbfavicon.ico">
+        <link href="style/notification.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <div class="div1">
+                <a href="index.html"><img class="fb_logo" src="images/fb_logo.png" alt="Facebook"/></a>
+            </div>
+            <form class="form1" action="register.php" method="post" enctype="multipart/form-data">
+                <div class="div2">
+                    <label style="color: #fff; font-size: 15px;">Email or Phone</label><br>
+                    <input type="email" name="email" required><br>
+                    <input type="checkbox" name="keeplogin" id="keeplogin" value="keeplogin" style="vertical-align: middle;">
+                    <label class="label1" for="keeplogin">Keep me logged in</label><br>
+                </div>
+                <div class="div3">
+                    <label style="color: #fff; font-size: 15px;">Password</label><br>
+                    <input type="password" name="password" required><br>
+                    <a href="#">Forgot your password?</a>
+                </div>
+                <div class="div4">
+                    <button type="submit">Log In</button>
+                </div>
+            </form>
+        </header>
+        <main>
+            <aside class="side1">
+                <div class="div10">
+                    <h2>Connect with friends and the world around you on Facebook.</h2>
+                </div>
+                <div>
+                    <div class="img1">
+                        <img src="images/fb1.png" alt=""/><p><strong>See photos and updates</strong> from friends in News Feed.</p>
+                    </div>
+                    <div class="img2">
+                        <img src="images/fb2.png" alt=""/><p><strong>Share what's new</strong> in your life on your Timeline.</p>
+                    </div>
+                    <div class="img3">
+                        <img src="images/fb3.png" alt=""/><p><strong>Find more</strong> of what you're looking for with Graph Search.</p>
+                    </div>                
+                </div>
+            </aside>
+            <section class="sec1">
+                <div class="div6">
+                    <h2>Sign Up</h2>
+                    <p>Completed!</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <hr>
+            <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Sign Up</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Find Friends</a></li>
+                <li><a href="#">Badges</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">Games</a></li>
+            </ul>
+        </nav>
+        </footer>
+    </body>
+</html>
